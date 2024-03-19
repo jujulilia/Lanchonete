@@ -16,7 +16,7 @@ import { FlatList, Image, StatusBar, StyleSheet, Text, TouchableOpacity, View } 
             nome: "Pizza Coração" ,
             preco: "45,99",
             descricao: "Pepperoni, queijo, molho de tomate ",
-            image: require('../assets/images/cake.jpg')
+            image: require('../assets/images/cake.png')
 
         },
 
@@ -80,7 +80,7 @@ import { FlatList, Image, StatusBar, StyleSheet, Text, TouchableOpacity, View } 
             nome: "Bolo Pou" ,
             preco: "14,99",
             descricao: "Pão, tomate, alface, queijo, carne, ",
-            image: require('../assets/images/Pou.png')
+            image: require('../assets/images/Pou.jpg')
 
         },
 
@@ -98,7 +98,7 @@ import { FlatList, Image, StatusBar, StyleSheet, Text, TouchableOpacity, View } 
             nome: "Hamburguer" ,
             preco: "14,99",
             descricao: "Pão, tomate, alface, queijo, carne, ",
-            image: require('../assets/images/cake.png')
+            image: require('../assets/images/cake.jng')
 
         },
 
@@ -107,7 +107,7 @@ import { FlatList, Image, StatusBar, StyleSheet, Text, TouchableOpacity, View } 
             nome: "Hamburguer" ,
             preco: "14,99",
             descricao: "Pão, tomate, alface, queijo, carne, ",
-            image: require('../assets/images/Pou.png')
+            image: require('../assets/images/cake.png')
 
         },
 
@@ -116,7 +116,7 @@ import { FlatList, Image, StatusBar, StyleSheet, Text, TouchableOpacity, View } 
             nome: "Hamburguer" ,
             preco: "14,99",
             descricao: "Pão, tomate, alface, queijo, carne, ",
-            image: require('../assets/images/Pou.png')
+            image: require('../assets/images/cake.png')
 
         },
 
@@ -125,7 +125,7 @@ import { FlatList, Image, StatusBar, StyleSheet, Text, TouchableOpacity, View } 
             nome: "Hamburguer" ,
             preco: "14,99",
             descricao: "Pão, tomate, alface, queijo, carne, ",
-            image: require('../assets/images/Pou.png')
+            image: require('../assets/images/cake.png')
 
         },
 
@@ -134,7 +134,7 @@ import { FlatList, Image, StatusBar, StyleSheet, Text, TouchableOpacity, View } 
             nome: "Hamburguer" ,
             preco: "14,99",
             descricao: "Pão, tomate, alface, queijo, carne, ",
-            image: require('../assets/images/Pou.png')
+            image: require('../assets/images/cake.png')
 
         },
         
@@ -143,7 +143,7 @@ import { FlatList, Image, StatusBar, StyleSheet, Text, TouchableOpacity, View } 
             nome: "Hamburguer" ,
             preco: "14,99",
             descricao: "Pão, tomate, alface, queijo, carne, ",
-            image: require('../assets/images/Pou.png')
+            image: require('../assets/images/cake.png')
 
            
         },
