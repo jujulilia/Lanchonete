@@ -80,7 +80,7 @@ import { FlatList, Image, StatusBar, StyleSheet, Text, TouchableOpacity, View } 
             nome: "Bolo Pou" ,
             preco: "14,99",
             descricao: "Pão, tomate, alface, queijo, carne, ",
-            image: require('../assets/images/Pou.jpg')
+            image: require('../assets/images/cake.png')
 
         },
 
