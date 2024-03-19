@@ -98,7 +98,7 @@ import { FlatList, Image, StatusBar, StyleSheet, Text, TouchableOpacity, View } 
             nome: "Hamburguer" ,
             preco: "14,99",
             descricao: "Pão, tomate, alface, queijo, carne, ",
-            image: require('../assets/images/cake.jng')
+            image: require('../assets/images/cake.png')
 
         },
 
