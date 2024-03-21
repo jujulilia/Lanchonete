@@ -1,5 +1,5 @@
 import React from "react";
-import { FlatList, Image, StatusBar, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { FlatList, Image, ImageBackground, StatusBar, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
     interface MenuItem{
         id: string;
@@ -13,137 +13,143 @@ import { FlatList, Image, StatusBar, StyleSheet, Text, TouchableOpacity, View } 
     const dados: MenuItem[] =[
         {
             id: "1" ,
-            nome: "Pizza Coração" ,
-            preco: "45,99",
-            descricao: "Pepperoni, queijo, molho de tomate ",
-            image: require('../assets/images/cake.png')
+            nome: "Pizza doce coração " ,
+            preco: " R$45,99",
+            descricao: "Sabor chocolate, chocolate branco ou moramngo. ",
+            image: require('../assets/images/pizzaD.png')
 
         },
 
         
         {
             id: "2" ,
-            nome: "Pizza doce coração " ,
-            preco: "45,99",
-            descricao: "Pão, tomate, alface, queijo, carne, ",
-            image: require('../assets/images/cake.png')
+            nome: "Torta de morango" ,
+            preco: "R$45,99",
+            descricao: "Torta sabor morango.",
+            image: require('../assets/images/torta.png')
 
         },
 
         {
             id: "3" ,
-            nome: "Empada Coração" ,
-            preco: ",99",
-            descricao: "Pão, tomate, alface, queijo, carne, ",
-            image: require('../assets/images/cake.png')
+            nome: "Biscoitos de urso" ,
+            preco: "R$5,99",
+            descricao: "5 unidades, sabor chocolate ou baunilha. ",
+            image: require('../assets/images/urso.png')
 
         },
 
         {
             id: "4" ,
-            nome: "Cupcake Shawn, o carneiro" ,
-            preco: "9,99",
-            descricao: "massa, chocolate, chantilli, pasta americana, ",
-            image: require('../assets/images/cake.png')
+            nome: "Biscoitos de tartaruga" ,
+            preco: "R$5,99",
+            descricao: "5 unidades, sabor chocolate ou baunilha. ",
+            image: require('../assets/images/tartaruga.png')
 
         },
 
         {
             id: "5" ,
-            nome: "Pastel Capivara" ,
-            preco: "9,99",
-            descricao: " tomate, alface, queijo, carne, presunto, queijo ",
-            image: require('../assets/images/cake.png')
+            nome: "Biscoitos de gato " ,
+            preco: "R$5,99",
+            descricao: "5 unidades, sabor chocolate ou baunilha.",
+            image: require('../assets/images/gato.png')
 
         },
 
         {
+            
             id: "6" ,
-            nome: "Pastel Dinossauro" ,
-            preco: "9,99",
-            descricao: "Presunto, queijo, tomate, alface, queijo, carne, ",
-            image: require('../assets/images/cake.png')
+            nome: "Biscoitinhos " ,
+            preco: "R$5,99",
+            descricao: "5 unidades, sabor chocolate ou baunilha.",
+            image: require('../assets/images/biscoitinhos.png')
 
         },
 
         {
             id: "7" ,
-            nome: "Pizza Batman" ,
-            preco: "44,99",
-            descricao: "Pepperoni, molho de tomate, queijo",
-            image: require('../assets/images/cake.png')
-
+            nome: "Cookie de Coração" ,
+            preco: "R$8,00",
+            descricao: "4 unidades, sabor chocolate. ",
+            image: require('../assets/images/cookie.png')
+           
+           
         },
 
         {
             id: "8" ,
-            nome: "Bolo Pou" ,
-            preco: "14,99",
-            descricao: "Pão, tomate, alface, queijo, carne, ",
-            image: require('../assets/images/cake.png')
-
+            nome: "Rocambole" ,
+            preco: "R$13,00",
+            descricao: "Rocambole de chocolate e leite ninho. ",
+            image: require('../assets/images/rocambole.png')
         },
 
         {
+            
             id: "9" ,
-            nome: "Enroladinho porquinho" ,
-            preco: "14,99",
-            descricao: "Pão, tomate, alface, queijo, carne, ",
-            image: require('../assets/images/cake.png')
+            nome: "Cupcake Shaun, o carneiro" ,
+            preco: "R$7,99",
+            descricao: "Uma unidade, sabor chocolate, baunilha ou morango.",
+            image: require('../assets/images/ovelha.png')
 
         },
 
         {
             id: "10" ,
-            nome: "Hamburguer" ,
-            preco: "14,99",
-            descricao: "Pão, tomate, alface, queijo, carne, ",
-            image: require('../assets/images/cake.png')
+            nome: "Panqueca" ,
+            preco: "R$10,00",
+            descricao: "Panquecas com morango ou chocolate. ",
+            image: require('../assets/images/panqueca.png')
+
 
         },
 
         {
+           
             id: "11" ,
-            nome: "Hamburguer" ,
-            preco: "14,99",
-            descricao: "Pão, tomate, alface, queijo, carne, ",
-            image: require('../assets/images/cake.png')
+            nome: "Bolo de chocolate" ,
+            preco: "R$8,00",
+            descricao: "Bolo sabor chocolate decorado com morangos. ",
+            image: require('../assets/images/chocolate.png')
 
         },
 
         {
-            id: "12" ,
-            nome: "Hamburguer" ,
-            preco: "14,99",
-            descricao: "Pão, tomate, alface, queijo, carne, ",
-            image: require('../assets/images/cake.png')
+             id: "12" ,
+        nome: "Bolo de morango" ,
+        preco: "R$8,00",
+        descricao: "4 unidades, sabor chocolate. ",
+        image: require('../assets/images/morango.png')
+
 
         },
 
         {
             id: "13" ,
-            nome: "Hamburguer" ,
-            preco: "14,99",
-            descricao: "Pão, tomate, alface, queijo, carne, ",
-            image: require('../assets/images/cake.png')
+            nome: "Bolo da vaca" ,
+            preco: "R$50,00",
+            descricao: "Bolo de Chocolate, chocolate branco, leite ninho e morango ",
+            image: require('../assets/images/vaca.png')
+
 
         },
 
         {
             id: "14" ,
-            nome: "Hamburguer" ,
-            preco: "14,99",
+            nome: "Bolo Roblox de aniversário" ,
+            preco: "R$14,99",
             descricao: "Pão, tomate, alface, queijo, carne, ",
-            image: require('../assets/images/cake.png')
+            image: require('../assets/images/aniversario.png')
 
         },
         
         {
             id: "15" ,
-            nome: "Hamburguer" ,
-            preco: "14,99",
-            descricao: "Pão, tomate, alface, queijo, carne, ",
-            image: require('../assets/images/cake.png')
+            nome: "Bolo Pou" ,
+            preco: "R$9,99",
+            descricao: "Bolo de Chocolate, chocolate branco, leite ninho e morango. ",
+            image: require('../assets/images/Pou.png')
 
            
         },
@@ -153,10 +159,10 @@ import { FlatList, Image, StatusBar, StyleSheet, Text, TouchableOpacity, View } 
 
     const renderItem = ({item}: {item : MenuItem} ) => (
         <TouchableOpacity style={styles.item}>
-
-            <Text>{item.nome}</Text>
-            <Text>{item.preco}</Text>
-            <Text>{item.descricao}</Text>
+        <Text style={styles.nomeText} >{item.nome}</Text>
+        <Text style={styles.tracoText}>________________</Text>
+            <Text style={styles.precoText}>{item.preco}</Text>
+            <Text style={styles.descricaoText}>{item.descricao}</Text>
 
             <TouchableOpacity>
                 <Image source ={item.image} style={styles.image}/>
@@ -172,9 +178,11 @@ import { FlatList, Image, StatusBar, StyleSheet, Text, TouchableOpacity, View } 
 function CriarMenu(): React.JSX.Element {
     return (
         <View style={styles.container}>
-            <StatusBar backgroundColor="#e0aaff" barStyle='light-content'/>
-            <View style={styles.header}>
-                <Text style={styles.headerText}>Flat List</Text>
+            <ImageBackground source={require('../assets/images/estrela.png')} >         
+             <StatusBar backgroundColor="#e0aaff" barStyle='light-content'/>
+            <View style={styles.header}
+            >
+                <Image source={require('../assets/images/8.png')} style={styles.logotipo}/>
             </View>
             <FlatList
                 data={dados}
@@ -182,6 +190,8 @@ function CriarMenu(): React.JSX.Element {
                 renderItem={renderItem}
                 keyExtractor={(item)=> item.id}
             />
+
+            </ImageBackground>
             <View style={styles.footer}>
                 <TouchableOpacity>
                     <Image
@@ -222,19 +232,45 @@ function CriarMenu(): React.JSX.Element {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: '#FFCED6'
         
     },
+
+    nomeText: {
+        fontWeight: 'bold',
+        fontSize: 30,
+        color: '#4D1F18'
+    },
+
+    tracoText:{
+      color: '#4D1F18'  
+    },
+
+    precoText: {
+        fontWeight: 'bold',
+        fontSize: 25,
+        color: '#4D1F18'
+    },
+
+    descricaoText: {
+        
+        fontSize: 20,
+        color: '#4D1F18'
+    },
+
     item: {
         backgroundColor: 'pink',
         padding: 20,
         marginVertical: 8,
         marginHorizontal: 16,
-        borderRadius: 20
+        borderRadius: 20,
+        borderColor: '#4D1F18',
+        borderWidth: 3
     },
     header: {
-        backgroundColor: '#e0aaff',
+        backgroundColor: '#FFCED6',
         alignItems: 'center',
-        paddingVertical: 20
+        paddingVertical: 50
     },
     headerText: {
         fontSize: 20,
@@ -254,11 +290,17 @@ const styles = StyleSheet.create({
         height: 30
     },
     image: {
-        width:80,
-        height:80,
-        marginBottom:20,
-        marginTop: -65,
-        marginLeft: 250
+        width:150,
+        height:200,
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        borderRadius: 10
+    },
+
+    logotipo: {
+        width: 190,
+        height: 150,
+       
     }
 });
 
