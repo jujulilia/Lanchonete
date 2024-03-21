@@ -184,24 +184,24 @@ function CriarMenu(): React.JSX.Element {
             <View style={styles.header}
             >
                 <Image source={require('../assets/images/LOLO.png')} style={styles.logotipo}/>
-                { <View style={styles.alinhamentoPesquisa}>
+                <View style={styles.alinhamentoPesquisa}>
                 <Image source={require('../assets/images/lupa.png')} style={styles.lupa}/>
 
                 <TextInput
                 style={styles.input} placeholder="Pesquisar" 
                 placeholderTextColor={'black'}/>
-            </View> }
+            </View> 
 
 
             </View>
 
-            {/* { <View style={styles.alinhamentoPesquisa}>
+              <View style={styles.alinhamentoPesquisa}>
                 <Image source={require('../assets/images/lupa.png')} style={styles.lupa}/>
 
                 <TextInput
                 style={styles.input} placeholder="Pesquisar" 
                 placeholderTextColor={'black'}/>
-            </View> } */}
+            </View> 
 
             <FlatList
                 data={dados}
@@ -293,7 +293,6 @@ const styles = StyleSheet.create({
         marginTop: 8
     },
     input:{
-       // backgroundColor: 'pink',
         height:35,
         width: '90%',
         borderRadius: 30,
@@ -309,7 +308,7 @@ const styles = StyleSheet.create({
         marginTop: 10,
         width: '90%'
     },
-    //ff8fa3
+   
     header: {
         backgroundColor: '#FFF8EB',
         alignItems: 'center',
