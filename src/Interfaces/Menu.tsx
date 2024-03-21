@@ -160,7 +160,7 @@ import { FlatList, Image, ImageBackground, StatusBar, StyleSheet, Text, TextInpu
     const renderItem = ({item}: {item : MenuItem} ) => (
         <TouchableOpacity style={styles.item}>
         <Text style={styles.nomeText} >{item.nome}</Text>
-        <Text style={styles.tracoText}>________________</Text>
+        <Text style={styles.tracoText}>__________________________________</Text>
             <Text style={styles.precoText}>{item.preco}</Text>
             <Text style={styles.descricaoText}>{item.descricao}</Text>
 
@@ -183,7 +183,7 @@ function CriarMenu(): React.JSX.Element {
              <StatusBar backgroundColor="#DB496E" barStyle='light-content'/>
             <View style={styles.header}
             >
-                <Image source={require('../assets/images/lia.png')} style={styles.logotipo}/>
+                <Image source={require('../assets/images/LOLO.png')} style={styles.logotipo}/>
                 { <View style={styles.alinhamentoPesquisa}>
                 <Image source={require('../assets/images/lupa.png')} style={styles.lupa}/>
 
@@ -251,7 +251,7 @@ function CriarMenu(): React.JSX.Element {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#FFCED6'
+        backgroundColor:  '#FFCED6'
         
     },
 
@@ -278,7 +278,7 @@ const styles = StyleSheet.create({
     },
 
     item: {
-        backgroundColor: '#d6e2e9',
+        backgroundColor: 'pink',
         padding: 20,
         marginVertical: 8,
         marginHorizontal: 16,
@@ -311,7 +311,7 @@ const styles = StyleSheet.create({
     },
     //ff8fa3
     header: {
-        backgroundColor: 'pink',
+        backgroundColor: '#FFF8EB',
         alignItems: 'center',
         paddingVertical: 25,
         borderBottomLeftRadius: 35,
@@ -324,7 +324,7 @@ const styles = StyleSheet.create({
     },
     footer: {
       borderTopWidth: 0.2,
-      backgroundColor: 'white',
+      backgroundColor: '#FFF8EB',
       flexDirection: 'row',
       justifyContent: 'space-around',
       alignItems: 'center',
