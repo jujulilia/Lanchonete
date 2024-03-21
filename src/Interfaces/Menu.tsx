@@ -1,5 +1,5 @@
 import React from "react";
-import { FlatList, Image, ImageBackground, StatusBar, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { FlatList, Image, ImageBackground, StatusBar, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 
     interface MenuItem{
         id: string;
@@ -99,7 +99,7 @@ import { FlatList, Image, ImageBackground, StatusBar, StyleSheet, Text, Touchabl
             id: "10" ,
             nome: "Panqueca" ,
             preco: "R$10,00",
-            descricao: "Panquecas com morango ou chocolate. ",
+            descricao: "Panquecas com morango, chocolate ou mel. ",
             image: require('../assets/images/panqueca.png')
 
 
@@ -109,7 +109,7 @@ import { FlatList, Image, ImageBackground, StatusBar, StyleSheet, Text, Touchabl
            
             id: "11" ,
             nome: "Bolo de chocolate" ,
-            preco: "R$8,00",
+            preco: "R$45,00",
             descricao: "Bolo sabor chocolate decorado com morangos. ",
             image: require('../assets/images/chocolate.png')
 
@@ -117,10 +117,10 @@ import { FlatList, Image, ImageBackground, StatusBar, StyleSheet, Text, Touchabl
 
         {
              id: "12" ,
-        nome: "Bolo de morango" ,
-        preco: "R$8,00",
-        descricao: "4 unidades, sabor chocolate. ",
-        image: require('../assets/images/morango.png')
+            nome: "Bolo de morango" ,
+            preco: "R$45,00",
+            descricao: "Bolo sabor morango com chantilli. ",
+            image: require('../assets/images/moranguinho.png')
 
 
         },
@@ -129,7 +129,7 @@ import { FlatList, Image, ImageBackground, StatusBar, StyleSheet, Text, Touchabl
             id: "13" ,
             nome: "Bolo da vaca" ,
             preco: "R$50,00",
-            descricao: "Bolo de Chocolate, chocolate branco, leite ninho e morango ",
+            descricao: "Bolo de Chocolate, chocolate branco, leite ninho e morango. ",
             image: require('../assets/images/vaca.png')
 
 
@@ -139,7 +139,7 @@ import { FlatList, Image, ImageBackground, StatusBar, StyleSheet, Text, Touchabl
             id: "14" ,
             nome: "Bolo Roblox de aniversário" ,
             preco: "R$14,99",
-            descricao: "Pão, tomate, alface, queijo, carne, ",
+            descricao: "Bolo de Chocolate, chocolate branco, leite ninho e morango.",
             image: require('../assets/images/aniversario.png')
 
         },
@@ -178,12 +178,31 @@ import { FlatList, Image, ImageBackground, StatusBar, StyleSheet, Text, Touchabl
 function CriarMenu(): React.JSX.Element {
     return (
         <View style={styles.container}>
-            <ImageBackground source={require('../assets/images/estrela.png')} >         
-             <StatusBar backgroundColor="#e0aaff" barStyle='light-content'/>
+            <ImageBackground source={require('../assets/images/cora.png')}  
+            style={styles.fundo}>         
+             <StatusBar backgroundColor="#DB496E" barStyle='light-content'/>
             <View style={styles.header}
             >
-                <Image source={require('../assets/images/8.png')} style={styles.logotipo}/>
+                <Image source={require('../assets/images/lia.png')} style={styles.logotipo}/>
+                { <View style={styles.alinhamentoPesquisa}>
+                <Image source={require('../assets/images/lupa.png')} style={styles.lupa}/>
+
+                <TextInput
+                style={styles.input} placeholder="Pesquisar" 
+                placeholderTextColor={'black'}/>
+            </View> }
+
+
             </View>
+
+            {/* { <View style={styles.alinhamentoPesquisa}>
+                <Image source={require('../assets/images/lupa.png')} style={styles.lupa}/>
+
+                <TextInput
+                style={styles.input} placeholder="Pesquisar" 
+                placeholderTextColor={'black'}/>
+            </View> } */}
+
             <FlatList
                 data={dados}
                 showsVerticalScrollIndicator={false}
@@ -259,18 +278,44 @@ const styles = StyleSheet.create({
     },
 
     item: {
-        backgroundColor: 'pink',
+        backgroundColor: '#d6e2e9',
         padding: 20,
         marginVertical: 8,
         marginHorizontal: 16,
         borderRadius: 20,
         borderColor: '#4D1F18',
-        borderWidth: 3
+        borderWidth: 2
     },
+    lupa: {
+        width: 30,
+        height: 30,
+        marginLeft: 10,
+        marginTop: 8
+    },
+    input:{
+       // backgroundColor: 'pink',
+        height:35,
+        width: '90%',
+        borderRadius: 30,
+        borderColor: '#4D1F18',
+        borderWidth: 1
+        
+
+    },
+
+    alinhamentoPesquisa:{
+        flexDirection: 'row',
+        justifyContent:'space-between',
+        marginTop: 10,
+        width: '90%'
+    },
+    //ff8fa3
     header: {
-        backgroundColor: '#FFCED6',
+        backgroundColor: 'pink',
         alignItems: 'center',
-        paddingVertical: 50
+        paddingVertical: 25,
+        borderBottomLeftRadius: 35,
+        borderBottomRightRadius: 35
     },
     headerText: {
         fontSize: 20,
@@ -301,7 +346,11 @@ const styles = StyleSheet.create({
         width: 190,
         height: 150,
        
-    }
+    },
+    fundo: {
+        flex: 1,
+        justifyContent: 'center'
+    },
 });
 
 export default CriarMenu;
