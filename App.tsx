@@ -5,8 +5,8 @@ import CriarMenu from './src/Interfaces/Menu';import CriarLogin from './src/Inte
 
 function App(): React.JSX.Element {
   return (
-   //<CriarMenu/>
-   <CriarLogin/>
+   <CriarMenu/>
+   //<CriarLogin/>
   );
 }
 

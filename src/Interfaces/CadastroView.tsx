@@ -15,12 +15,14 @@ function CriarLogin(): JSX.Element {
             email :email,
             password: password,
 
+            
         }
 
         console.log(dados);
     }
     return(
         <View style={styles.container}>
+            
             <Image style={styles.logo}
              resizeMode="contain"
             source={require('../assets/images/LOLO.png')}/>

@@ -195,13 +195,7 @@ function CriarMenu(): React.JSX.Element {
 
             </View>
 
-              <View style={styles.alinhamentoPesquisa}>
-                <Image source={require('../assets/images/lupa.png')} style={styles.lupa}/>
-
-                <TextInput
-                style={styles.input} placeholder="Pesquisar" 
-                placeholderTextColor={'black'}/>
-            </View> 
+              
 
             <FlatList
                 data={dados}
