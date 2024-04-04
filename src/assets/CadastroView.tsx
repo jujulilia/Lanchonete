@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import{Image, StyleSheet, Text, TextInput,StatusBar, Touchable, TouchableOpacity, View} from "react-native";
+import { launchImageLibrary } from "react-native-image-picker";
 
 
 
@@ -20,6 +21,9 @@ function CriarLogin(): JSX.Element {
 
         console.log(dados);
     }
+
+    
+    
     return(
         <View style={styles.container}>
             
