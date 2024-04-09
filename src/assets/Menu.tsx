@@ -179,10 +179,11 @@ function CriarMenu(): React.JSX.Element {
     return (
         <View style={styles.container}>
             <ImageBackground source={require('../assets/images/cora.png')}  
-            style={styles.fundo}>         
+            style={styles.fundo}> 
+
              <StatusBar backgroundColor="#DB496E" barStyle='light-content'/>
-            <View style={styles.header}
-            >
+            <View style={styles.header} >
+              
                 <Image source={require('../assets/images/LOLO.png')} style={styles.logotipo}/>
                 <View style={styles.alinhamentoPesquisa}>
                 <Image source={require('../assets/images/lupa.png')} style={styles.lupa}/>
@@ -191,6 +192,7 @@ function CriarMenu(): React.JSX.Element {
                 style={styles.input} placeholder="Pesquisar" 
                 placeholderTextColor={'black'}/>
             </View> 
+
 
 
             </View>
@@ -204,7 +206,7 @@ function CriarMenu(): React.JSX.Element {
                 keyExtractor={(item)=> item.id}
             />
 
-            </ImageBackground>
+            
             <View style={styles.footer}>
                 <TouchableOpacity>
                     <Image
@@ -233,11 +235,8 @@ function CriarMenu(): React.JSX.Element {
                     style={styles.footerIcon}
                     />
                 </TouchableOpacity>
-
-                
-                
-              
-            </View>
+                </View>
+                </ImageBackground>
         </View>
     );
 }

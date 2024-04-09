@@ -1,22 +1,27 @@
 import React, { useState } from "react";
-import {Image, ImageBackground, ScrollView, StatusBar, StyleSheet, Text, TextInput, TouchableOpacity, View} from 'react-native';
+import {Image, ScrollView, StatusBar, StyleSheet, Text, TextInput, TouchableOpacity, View} from 'react-native';
 import { launchCamera, launchImageLibrary } from "react-native-image-picker";
 import axios from 'axios';
 
-const CadastroProduto: React.FC = () => {
-    const[produtos, setProdutos] = useState<Cliente[]>([]);
+const CadastroCliente: React.FC = () => {
+    const[clientes, setclietes] = useState<Cliente[]>([]);
     const[nome, setNome] = useState<string>('');
-    const[preco, setPreco] = useState<string>('');
-    const[ingredientes, setIngredientes] = useState<string>('');
+    const[endereco, setEndereco] = useState<string>('');
+    const[email, setEmail] = useState<string>('');
+    const[telefone, setTelefone] = useState<string>('');
+    const[cpf, setCpf] = useState<string>('');
+    const[password, setPassword] = useState<string>('');
     const[imagem, setImagem] = useState<any>('');
-    
 
     const CadastrarCliente = async() => {
         try{
         const formData = new FormData();
         formData.append('nome', nome);
-        formData.append('preco', preco);
-        formData.append('ingredientes', ingredientes);
+        formData.append('endereco', endereco);
+        formData.append('email', email);
+        formData.append('telefone', telefone);
+        formData.append('cpf', cpf);
+        formData.append('password', password);
 
         formData.append('imagem', {
             uri: imagem,
@@ -24,7 +29,7 @@ const CadastroProduto: React.FC = () => {
             name: new Date() + '.jpg'
         }); 
 
-        const response = await axios.post('http://10.137.11.227:8000/api/produtos', formData,{
+        const response = await axios.post('http://10.137.11.227:8000/api/clientes', formData,{
             headers: {
                 'content-Type': 'multipart/form-data'
             }
@@ -87,19 +92,18 @@ const CadastroProduto: React.FC = () => {
                 
             <Image source={require('../assets/images/LOLO.png')} style={styles.logotipo}/>
 
-
-            <Text style={styles.headerText}>Cadastro de Produto</Text>
+            <Text style={styles.headerText}>Cadastro de Cliente</Text>
                 <StatusBar backgroundColor="#DB496E" barStyle='light-content'/>
 
 
             </View>
+            
 
             <View style={styles.alinhamentoImagemSelecionada}>
                     {imagem ? <Image source={{uri: imagem}} style={styles.imagemSelecionada}/> : null}
                 </View>
              
-               
-            
+
             <View style={styles.form}>
                 <TextInput
                 style={styles.input} 
@@ -109,15 +113,34 @@ const CadastroProduto: React.FC = () => {
 
                 <TextInput
                 style={styles.input} 
-                placeholder="Preço" 
-                value={preco}
-                onChangeText={setPreco}/>
+                placeholder="Endereco" 
+                value={endereco}
+                onChangeText={setEndereco}/>
 
                 <TextInput 
                 style={styles.input}
-                placeholder="Ingredientes"
-                value={ingredientes}
-                onChangeText={setIngredientes} />
+                placeholder="E-mail"
+                value={email}
+                onChangeText={setEmail} />
+
+                <TextInput
+                style={styles.input}
+                placeholder="Telefone"
+                value ={telefone}
+                onChangeText={setTelefone}/>
+                 
+
+                 <TextInput
+                style={styles.input} 
+                placeholder="CPF" 
+                value={cpf}
+                onChangeText={setCpf}/>
+
+                <TextInput
+                style={styles.input} 
+                placeholder="Senha" 
+                value={password}
+                onChangeText={setPassword}/>
 
                 
                 
@@ -136,7 +159,6 @@ const CadastroProduto: React.FC = () => {
                
 
             </View>
-
         </View>
         </ScrollView>
     );
@@ -174,9 +196,9 @@ const CadastroProduto: React.FC = () => {
         imageButton: {
             backgroundColor: '#4D1F18',
             padding: 10,
-            borderRadius: 11,
+            borderRadius: 5,
             alignItems: 'center',
-            marginBottom: 11
+            marginBottom: 10
         },
         imageButtonText: {
             color: 'white',
@@ -186,7 +208,7 @@ const CadastroProduto: React.FC = () => {
             width: 200,
             height: 200,
             resizeMode: 'cover',
-            borderRadius: 10,
+            borderRadius: 150,
             marginBottom: 10
         },
         alinhamentoImagemSelecionada: {
@@ -214,4 +236,4 @@ const CadastroProduto: React.FC = () => {
     });
 
 
-export default CadastroProduto;
+export default CadastroCliente;
