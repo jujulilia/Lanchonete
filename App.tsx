@@ -13,8 +13,8 @@ function App(): React.JSX.Element {
    
    
 
-    <CadastroProduto/>
-    //<CadastroCliente/>
+    //<CadastroProduto/>
+    <CadastroCliente/>
 
   );
 }

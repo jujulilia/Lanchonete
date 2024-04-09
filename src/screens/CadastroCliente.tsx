@@ -156,9 +156,38 @@ const CadastroCliente: React.FC = () => {
                     <Text style={styles.buttonText}>Cadastrar</Text>
                 </TouchableOpacity>
                    
-               
-
             </View>
+
+            <View style={styles.footer}>
+                <TouchableOpacity>
+                    <Image
+                    source={require('../assets/images/casa.png')}
+                    style={styles.footerIcon}
+                    />
+                </TouchableOpacity>
+
+                <TouchableOpacity>
+                    <Image
+                    source={require('../assets/images/entrega.png')}
+                    style={styles.footerIcon}
+                    />
+                </TouchableOpacity>
+
+                <TouchableOpacity>
+                    <Image
+                    source={require('../assets/images/perfil.png')}
+                    style={styles.footerIcon}
+                    />
+                </TouchableOpacity>
+
+                <TouchableOpacity>
+                    <Image
+                    source={require('../assets/images/cardapiupiu.png')}
+                    style={styles.footerIcon}
+                    />
+                </TouchableOpacity>
+                </View>
+
         </View>
         </ScrollView>
     );
@@ -180,10 +209,23 @@ const CadastroCliente: React.FC = () => {
             fontWeight: 'bold',
             color: 'white'
         },
+        footer: {
+            backgroundColor: '#ffff',
+            flexDirection: 'row',
+            justifyContent: 'space-around',
+            borderTopRightRadius: 30,
+            borderTopLeftRadius:30,
+            padding: 15
+         },
+          footerIcon: {
+              width: 30,
+              height: 30
+          },
         form: {
             padding: 10,
             backgroundColor: '#f0f0f0',
-            marginBottom: 10
+            marginBottom: 10,
+            paddingVertical: 98
         },
         input: {
             height: 40,
