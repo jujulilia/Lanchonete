@@ -4,14 +4,14 @@ import { launchCamera, launchImageLibrary } from "react-native-image-picker";
 import axios from 'axios';
 
 const CadastroProduto: React.FC = () => {
-    const[produtos, setProdutos] = useState<Cliente[]>([]);
+    const[produtos, setProdutos] = useState<Produto[]>([]);
     const[nome, setNome] = useState<string>('');
     const[preco, setPreco] = useState<string>('');
     const[ingredientes, setIngredientes] = useState<string>('');
     const[imagem, setImagem] = useState<any>('');
     
 
-    const CadastrarCliente = async() => {
+    const CadastrarProduto = async() => {
         try{
         const formData = new FormData();
         formData.append('nome', nome);
@@ -129,7 +129,7 @@ const CadastroProduto: React.FC = () => {
                     <Text style={styles.imageButtonText}>Tirar Foto</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.button} onPress={CadastrarCliente}>
+                <TouchableOpacity style={styles.button} onPress={CadastrarProduto}>
                     <Text style={styles.buttonText}>Cadastrar</Text>
                 </TouchableOpacity>
             </View>
@@ -158,6 +158,13 @@ const CadastroProduto: React.FC = () => {
                 <TouchableOpacity>
                     <Image
                     source={require('../assets/images/cardapiupiu.png')}
+                    style={styles.footerIcon}
+                    />
+                </TouchableOpacity>
+                
+                <TouchableOpacity>
+                    <Image
+                    source={require('../assets/images/carrinho.png')}
                     style={styles.footerIcon}
                     />
                 </TouchableOpacity>
@@ -218,7 +225,7 @@ const CadastroProduto: React.FC = () => {
         imageButton: {
             backgroundColor: '#4D1F18',
             padding: 10,
-            borderRadius: 11,
+            borderRadius: 5,
             alignItems: 'center',
             marginBottom: 11
         },
