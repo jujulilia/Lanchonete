@@ -44,6 +44,10 @@ import { FlatList, Image, ImageBackground, StatusBar, StyleSheet, Text, TextInpu
             <TouchableOpacity>
                 <Image source ={item.image} style={styles.image}/>
             </TouchableOpacity>
+            <View style={styles.imgAlign}>
+            <Image source={item.image ?{uri:item.image}:require('./images/cake.png')}style={styles.image}/>
+
+            </View>
         </TouchableOpacity>
 
         
@@ -137,6 +141,10 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 25,
         color: '#4D1F18'
+    },
+    imgAlign:{
+        flexDirection:'row',
+        alignSelf: 'flex-end'
     },
 
     ingredientesText: {

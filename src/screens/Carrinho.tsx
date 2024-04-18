@@ -19,7 +19,7 @@ const Carrinho = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://10.137.11.227:8000/api/produtos');
+                const response = await axios.get('http://10.137.11.227:8000/api/produto');
                 console.log('Dados recebidos da API:', response.data);
                 setDados(response.data);
             } catch (error) {
@@ -42,7 +42,11 @@ const Carrinho = () => {
             <Text style={styles.precoText}>{item.preco}</Text>
 
             <Text>{item.ingredientes}  </Text>
-           
+            
+            <View style={styles.imgAlign}>
+            <Image source={item.image ?{uri:item.image}:require('./')}style={styles.image}/>
+
+            </View>
            
         </View>
     );
@@ -162,8 +166,10 @@ const styles = StyleSheet.create({
         borderRadius: 30,
         borderColor: '#4D1F18',
         borderWidth: 1
-        
-
+    },
+    imgAlign:{
+        flexDirection:'row',
+        alignSelf: 'flex-end'
     },
 
     alinhamentoPesquisa:{
