@@ -7,7 +7,7 @@ import { FlatList, Image, ImageBackground, StatusBar, StyleSheet, Text, TextInpu
         nome: string;
         preco: string;
         ingredientes: string;
-        image: any
+        image: any;
         
     }
     const Cardapio = () => {
