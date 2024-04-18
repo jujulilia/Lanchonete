@@ -14,8 +14,8 @@ function App(): React.JSX.Element {
    
 
     //<CadastroProduto/>
-    //<CadastroCliente/>
-    <Carrinho/>
+    <CadastroCliente/>
+    //<Carrinho/>
 
   );
 }
