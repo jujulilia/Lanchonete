@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { FlatList, Image, ImageBackground, StatusBar, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
-
+import { useNavigation } from "@react-navigation/native";
     interface MenuItem{
         id: string;
         nome: string;
@@ -23,7 +23,7 @@ import { FlatList, Image, ImageBackground, StatusBar, StyleSheet, Text, TextInpu
                 } catch (error) {
                     console.error('Erro ao buscar os dados:', error);
                     setError("Ocorreu um erro ao buscar os bolos");
-                }
+                }   
             };
     
             fetchData();
@@ -45,13 +45,14 @@ import { FlatList, Image, ImageBackground, StatusBar, StyleSheet, Text, TextInpu
                 <Image source ={item.image} style={styles.image}/>
             </TouchableOpacity>
             <View style={styles.imgAlign}>
-            <Image source={item.image ?{uri:item.image}:require('./images/cake.png')}style={styles.image}/>
+            <Image source={item.image ?{uri:item.image}:require('../assets/images/cake.png')}style={styles.image}/>
 
             </View>
         </TouchableOpacity>
 
         
     );
+    const navigation = useNavigation();
 
     return (
         <View style={styles.container}>
@@ -83,14 +84,14 @@ import { FlatList, Image, ImageBackground, StatusBar, StyleSheet, Text, TextInpu
                     />
                 </TouchableOpacity>
 
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('PesquisaProdutos')}>
                     <Image
                     source={require('../assets/images/entrega.png')}
                     style={styles.footerIcon}
                     />
                 </TouchableOpacity>
 
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('CadastroProduto')}>
                     <Image
                     source={require('../assets/images/perfil.png')}
                     style={styles.footerIcon}
